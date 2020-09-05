@@ -28,7 +28,7 @@ app.post("/api/user", (req, res) => {
   });
 });
 // user login
-app.post("/api/user/login", function (req, res) {
+app.post("/user/login", function (req, res) {
   User.findOne({ email: req.body.email }, (err, user) => {
     if (!user) {
       res.json({ message: "Auth failed, user not found" });
