@@ -16,7 +16,7 @@ app.use(bodyParser.json());
 app.use(cookieParser());
 
 //posting request to route /api/user
-//create user
+//create user add to database
 app.post("/api/user", (req, res) => {
   const user = new User({
     email: req.body.email,
