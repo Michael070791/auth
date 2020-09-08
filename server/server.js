@@ -3,6 +3,7 @@ const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const cookieParser = require("cookie-parser");
 
+//promise
 mongoose.Promise = global.Promise;
 const app = express();
 //connection to mongodb cloud database
