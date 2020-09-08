@@ -5,7 +5,7 @@ const cookieParser = require("cookie-parser");
 
 mongoose.Promise = global.Promise;
 const app = express();
-//connection to database
+//connection to mongodb cloud database
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost:27017/auth");
 //import user model
 //Midlewares
