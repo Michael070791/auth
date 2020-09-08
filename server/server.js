@@ -38,12 +38,9 @@ app.post("/user/login", function (req, res) {
       if (err) throw err;
       if (!isMatch) return res.status(400).json({ message: "Wrong password" });
       user.generateToken((err, user) => {
-        if (err) {
-          return res.status(400).send(err);
-        }
+        if (err) return res.status(400).send(err);
         res.cookie("auth", user.token).send("ok");
       });
-      //   res.status(200).send(user);
     });
   });
 });
